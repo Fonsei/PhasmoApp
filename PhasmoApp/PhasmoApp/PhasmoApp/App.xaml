@@ -56,6 +56,12 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="FontFamily" Value="" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,10 +1,17 @@
-﻿using System;
+﻿using PhasmoApp.Models.Helpers;
+using PhasmoApp.MyResources;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace PhasmoApp.ViewModels
 {
-    class MainViewModel
+    public class MainViewModel : ViewModelBase
     {
+        public MainViewModel()
+        {
+            Title = AppResources.Home;
+
+        }
     }
 }

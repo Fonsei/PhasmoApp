@@ -1,12 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PhasmoApp.Views.MainPage">
+<ContentPage
+    x:Class="PhasmoApp.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PhasmoApp.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Title="{xct:Translate GameTitle}"
+    x:DataType="local:MainViewModel">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <StackLayout Margin="0,10" HorizontalOptions="Center">
+                <Frame Padding="0" BorderColor="Black">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Style="{StaticResource ButtonStyle}"
+                        Text="Play" />
+                </Frame>
+                <Frame Padding="0" BorderColor="Black">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Style="{StaticResource ButtonStyle}"
+                        Text="Training" />
+                </Frame>
+                <Frame Padding="0" BorderColor="Black">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Style="{StaticResource ButtonStyle}"
+                        Text="Item Store" />
+                </Frame>
+                <Frame Padding="0" BorderColor="Black">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Style="{StaticResource ButtonStyle}"
+                        Text="Options" />
+                </Frame>
+                <Frame Padding="0" BorderColor="Black">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Style="{StaticResource ButtonStyle}"
+                        Text="QUit Game" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame BorderColor="black">
+                    <StackLayout>
+                        <Label Text="Stats" />
+                        <Line BackgroundColor="black" HeightRequest="1" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Level:" />
+                            <Label Text="1" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="EXP Needed:" />
+                            <Label Text="88 XP" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Money:" />
+                            <Label Text="$105" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BorderColor="black" HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <Label HorizontalOptions="Center" Text="Daily Challenges" />
+                        <Label Text="Survive with Only the starter items." />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="$15" />
+                            <ProgressBar
+                                HorizontalOptions="FillAndExpand"
+                                Progress="0.1"
+                                ProgressColor="Gray" />
+                            <Label Text="0/1" />
+
+                        </StackLayout>
+                        <Label Text="Get a $50 + photo reward" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="$15" />
+                            <ProgressBar
+                                HorizontalOptions="FillAndExpand"
+                                Progress="0.1"
+                                ProgressColor="Gray" />
+                            <Label Text="0/1" />
+                        </StackLayout>
+                        <Label Text="Reach 0 sanity" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="$15" />
+                            <ProgressBar
+                                HorizontalOptions="FillAndExpand"
+                                Progress="0.1"
+                                ProgressColor="Gray" />
+                            <Label Text="0/1" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Label Text="Reset In:" />
+                            <Label Text="23:25:16" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
